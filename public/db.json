@@ -1,5 +1,5 @@
 {
-  "Guns": [
+  "guns": [
     {
       "id": 1,
       "gun_name": "AK-47", 
