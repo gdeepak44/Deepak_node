@@ -1,0 +1,85 @@
+{
+  "Guns": [
+    {
+      "id": 1,
+      "gun_name": "AK-47", 
+      "Gun_type": "long range", 
+      "cost": "$2.5m", 
+      "ammo": "9mm", 
+      "range": "1350 m",
+      "gun_image": "https://i0.wp.com/www.buyguns.co.za/wp/wp-content/uploads/2024/03/IMG_4375-1.jpg"
+    },
+    {
+      "id": 2,
+      "gun_name": "M4A1", 
+      "Gun_type": "assault", 
+      "cost": "$1.8m", 
+      "ammo": "5.56mm", 
+      "range": "600 m",
+      "gun_image": "https://cdn.classicfirearms.com/media/wysiwyg/Blog/m4-vs-m4a1-blog-graphic.jpg"
+    },
+    {
+      "id": 3,
+      "gun_name": "Desert Eagle", 
+      "Gun_type": "handgun", 
+      "cost": "$1.2m", 
+      "ammo": "50 AE", 
+      "range": "200 m",
+      "gun_image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/DesertEagle_50AE.jpg"
+    },
+    {
+      "id": 4,
+      "gun_name": "Uzi", 
+      "Gun_type": "submachine gun", 
+      "cost": "$500k", 
+      "ammo": "9mm", 
+      "range": "200 m",
+      "gun_image": "https://www.swatmag.com/wp-content/uploads/2022/06/Uzis-fire-controls-are-ergonomic-and-simple-to-operate-with-shooting-hand.jpg"
+    },
+    {
+      "id": 5,
+      "gun_name": "Barrett M82", 
+      "Gun_type": "sniper", 
+      "cost": "$6.5m", 
+      "ammo": "50 BMG", 
+      "range": "2000 m",
+      "gun_image": "https://m.media-amazon.com/images/I/61ZQ-2Y2teL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 6,
+      "gun_name": "M1911", 
+      "Gun_type": "handgun", 
+      "cost": "$900k", 
+      "ammo": "45 ACP", 
+      "range": "50 m",
+      "gun_image": "https://d2j6dbq0eux0bg.cloudfront.net/images/17319685/4215034506.jpg"
+    },
+    {
+      "id": 7,
+      "gun_name": "Glock 19", 
+      "Gun_type": "handgun", 
+      "cost": "$750k", 
+      "ammo": "9mm", 
+      "range": "50 m",
+      "gun_image": "https://www.19fortyfive.com/wp-content/uploads/2021/12/Glock-19-Gen-4.jpg"
+    },
+    {
+      "id": 8,
+      "gun_name": "FN SCAR", 
+      "Gun_type": "assault", 
+      "cost": "$3.5m", 
+      "ammo": "5.56mm", 
+      "range": "800 m",
+      "gun_image": "https://kineticdg.com/wp-content/uploads/2018/06/Fix-It-Sticks-4-1.jpg"
+    },
+    {
+      "id": 9,
+      "gun_name": "SPAS-12", 
+      "Gun_type": "shotgun", 
+      "cost": "$2m", 
+      "ammo": "12 gauge", 
+      "range": "50 m",
+      "gun_image": "https://www.recoilweb.com/wp-content/uploads/2023/01/SPAS-12-Review-8.jpg"
+    }
+  ]
+}
