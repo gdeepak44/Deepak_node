@@ -1,7 +1,16 @@
 const http = require("http");
 const path = require("path");
 const fs = require("fs");
-const server = http.createServer((req, res) => {
+const {MongoClient} = require("mongodb");
+
+
+const getGuns = async (client) =>{
+    const cursor = client.db("guns").collection("gunDetails").find({});
+    const results = await cursor.toArray();
+    return JSON.stringify(results);
+}
+
+const server = http.createServer(async (req, res) => {
   if (req.url === '/') {
     fs.readFile(path.join(__dirname, 'public', 'index.html'),
       (err, content) => {
@@ -36,22 +45,30 @@ const server = http.createServer((req, res) => {
       res.end(data);
     });
   }
-  else if (req.url === '/api') {
-    fs.readFile(
-      path.join(__dirname, 'public', 'db.json'), 'utf-8',
-      (err, content) => {
-
-        if (err) throw err;
-        res.setHeader("Access-Control-Allow-Origin", "*")
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(content);
-      }
-    );
-  }
+  else if (req.url === "/api"){
+    const URL = "mongodb+srv://deepak:1234@cluster0.hsfuo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+    const client = new MongoClient(URL);
+    try{
+        await client.connect();
+        console.log("Database is connected sucessfully") ;
+        const guns = await getGuns(client);
+        res.setHeader("Access-Control-Allow-Origin","*");
+        res.writeHead(200,{"content-type":"application/json"});
+        console.log(guns);
+        res.end(guns);
+    }
+    catch(err){
+        console.log("Error in connecting database",err);
+    }
+    finally{
+        await client.close();
+        console.log("Database connection is closed");
+    }
+}
   else {
     res.end("<h1> 404 not found</h1>");
   }
 });
 
-const PORT = process.env.PORT || 7396;
+const PORT = process.env.PORT || 2564;
 server.listen(PORT, () => console.log(`Server is running on port ${PORT} `));
